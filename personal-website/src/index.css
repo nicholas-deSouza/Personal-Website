@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+}
+
+:root {
+  font-family: Futura, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #F8F8F9;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  color: #5433FF;
+  font-family: Futura;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h2 {
+  color: #000;
+  font-family: Futura;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.info-section {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 31em;
+}
+
+.linked-in{
+  width: 2.5em;
+  height: auto;
+}
+
+.github {
+  width: 2.5em;
+  height: auto;
+}
+
+.header {
+  height: 7em;
+  width: 100vw;
+  background-color: #F8F8F9;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.23);
+}
