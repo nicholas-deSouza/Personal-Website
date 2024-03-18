@@ -1,6 +1,7 @@
 import MyInfo from "./components/callToAction";
 import Header from "./components/header";
 import GradientComponent from "./components/gradientComponent";
+import { Secret } from "./components/secretCode/secret";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <MyInfo />
       <Header />
       <GradientComponent />
+      <Secret />
     </>
   );
 }
