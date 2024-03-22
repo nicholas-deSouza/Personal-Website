@@ -5,6 +5,7 @@ let animationController: number;
 
 export const AudioVisualizer = () => {
   // const [file, setFile] = useState<File | null>(null);
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
   const source = useRef<MediaElementAudioSourceNode>();
@@ -31,19 +32,28 @@ export const AudioVisualizer = () => {
     // console.log(songData);
 
     // default is 4
-    const bar_width = 4;
+    const bar_width = 8;
     let start = 0;
     const ctx = canvasRef.current!.getContext("2d")!;
     const ctx2 = canvasRef.current!.getContext("2d")!;
+
+    // const observer = new ResizeObserver((entries) => {
+    //     canvasRef.current!.width = canvasRef.current!.clientWidth;
+    //     canvasRef.current!.height = canvasRef.current!.clientHeight;
+    //   });
+    //   observer.observe(canvasRef)
 
     // start of canvas building
     ctx.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
     ctx2.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
 
+    canvasRef.current!.width = window.innerWidth;
+    canvasRef.current!.height = window.innerHeight;
+
     for (let i = 0; i < songData.length; i++) {
       // compute x coordinate where we would draw
       // default is 4
-      start = i * 8;
+      start = i * 32;
 
       //creates the linear gradient
       const gradient = ctx.createLinearGradient(0, 0, canvasRef.current!.width, 0);
@@ -62,7 +72,7 @@ export const AudioVisualizer = () => {
     for (let i = 0; i < songData.length; i++) {
       // compute x coordinate where we would draw
       // default is 4
-      start = i * 8;
+      start = i * 32;
 
       // creates the linear gradient
       const gradient2 = ctx2.createLinearGradient(0, 0, canvasRef.current!.width, 0);
