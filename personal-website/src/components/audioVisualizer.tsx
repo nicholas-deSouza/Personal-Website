@@ -62,7 +62,7 @@ export const AudioVisualizer = () => {
     for (let i = 0; i < songData.length; i++) {
       // compute x coordinate where we would draw
       // default is 4
-      start = i * 4;
+      start = i * 8;
 
       // creates the linear gradient
       const gradient2 = ctx2.createLinearGradient(0, 0, canvasRef.current!.width, 0);
