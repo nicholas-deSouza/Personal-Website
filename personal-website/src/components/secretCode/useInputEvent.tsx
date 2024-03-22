@@ -7,7 +7,7 @@ export const useInputEvent = () => {
   const [key, setKey] = useState<string | null>(null);
 
   useEffect(() => {
-    const keyDownHandler = ({ code }: { code: string }) => setKey(code);
+    const keyDownHandler = ({ key }: { key: string }) => setKey(key);
     const keyUpHandler = () => setKey(null);
 
     window.addEventListener("keydown", keyDownHandler);
