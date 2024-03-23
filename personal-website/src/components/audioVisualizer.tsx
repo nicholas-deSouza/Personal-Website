@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { AudioControls } from "./audioControls";
 // import {useState} from 'react'
 
 let animationController: number;
@@ -29,13 +30,15 @@ export const AudioVisualizer = () => {
     }
     const songData = new Uint8Array(140);
     analyzer.current?.getByteFrequencyData(songData);
-    // console.log(songData);
+    console.log(songData);
 
     // default is 4
     const bar_width = 8;
     let start = 0;
     const ctx = canvasRef.current!.getContext("2d")!;
     const ctx2 = canvasRef.current!.getContext("2d")!;
+    canvasRef.current!.width = window.innerWidth;
+    canvasRef.current!.height = window.innerHeight;
 
     // const observer = new ResizeObserver((entries) => {
     //     canvasRef.current!.width = canvasRef.current!.clientWidth;
@@ -72,6 +75,7 @@ export const AudioVisualizer = () => {
     for (let i = 0; i < songData.length; i++) {
       // compute x coordinate where we would draw
       // default is 4
+
       start = i * 32;
 
       // creates the linear gradient
@@ -101,15 +105,9 @@ export const AudioVisualizer = () => {
       {/* <input type="file" onChange={({ target: { files } }) => files![0] && setFile(files![0])} /> */}
       {/* {file && ( */}
       {/* )} */}
+
       <canvas ref={canvasRef}></canvas>
-      <audio
-        ref={audioRef}
-        onPlay={handleAudioPlay}
-        src={
-          "/src/assets/Dune_ Part Two Soundtrack _ Kiss the Ring - Hans Zimmer _ WaterTower [ ytmp3x.cc ].mp3"
-        }
-        controls
-      />
+      <AudioControls audioRef={audioRef} handleAudioPlay={handleAudioPlay} />
     </div>
   );
 };
