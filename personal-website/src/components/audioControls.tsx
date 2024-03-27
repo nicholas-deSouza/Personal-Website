@@ -6,6 +6,7 @@ interface AudioControlsProps {
 export const AudioControls: React.FC<AudioControlsProps> = ({ audioRef, handleAudioPlay }) => {
   return (
     <audio
+      className="audio-controls"
       ref={audioRef}
       onPlay={handleAudioPlay}
       controls // Use "controls" attribute to display default audio controls
