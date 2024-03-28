@@ -14,7 +14,7 @@ const GradientComponent: React.FC<GradientComponentProps> = ({ check }) => {
       console.log(check);
 
       const gradientCanvas = document.getElementById("gradient-canvas")!;
-      gradientCanvas.style.setProperty("--gradient-color-1", "#E8AE52");
+      gradientCanvas.style.setProperty("--gradient-color-1", "#E18531");
       gradientCanvas.style.setProperty("--gradient-color-2", "#CA7B4A");
       gradientCanvas.style.setProperty("--gradient-color-3", "#491f2f");
 
