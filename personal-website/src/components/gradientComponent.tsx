@@ -23,7 +23,16 @@ const GradientComponent: React.FC<GradientComponentProps> = ({ check }) => {
     return () => {};
   }, [check]);
 
-  return <canvas id="gradient-canvas" />;
+  return (
+    <div>
+      <svg className="svg">
+        <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+          <path d="M1,0.001 C0.872,0.483,0.344,0.271,0,0.647 V1 H1 V0.001"></path>
+        </clipPath>
+      </svg>
+      <canvas id="gradient-canvas" />
+    </div>
+  );
 };
 
 export default GradientComponent;

@@ -1,7 +1,7 @@
 import MyInfo from "./components/callToAction";
 import Header from "./components/header";
 import { Secret } from "./components/secretCode/secret";
-import SwiperComponent from "./components/swiper";
+// import SwiperComponent from "./components/swiper";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <MyInfo />
       <Header />
       <Secret />
-      <SwiperComponent />
+      {/* <SwiperComponent /> */}
     </>
   );
 }

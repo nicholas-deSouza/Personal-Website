@@ -18,9 +18,9 @@ export const Secret = () => {
       // .swiper-button-prev
 
       // grabs first value from HTML Collections and type casts it to an HTML Element
-      const swiperButtonPrev = document.getElementsByClassName("swiper-button-prev")[0] as HTMLElement;
+      // const swiperButtonPrev = document.getElementsByClassName("swiper-button-prev")[0] as HTMLElement;
 
-      swiperButtonPrev.style.color = "black";
+      // swiperButtonPrev.style.color = "black";
 
       console.log("Konami code activated");
     }
