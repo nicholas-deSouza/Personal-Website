@@ -24,10 +24,12 @@ export default function SwiperComponent() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <a href="https://www.groovegenerator.xyz/">Groove</a>
+          <img src="/src/assets/groove-generator.png"></img>
+          <a href="https://www.groovegenerator.xyz/"></a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://focus-4-you.surge.sh/">Focus</a>
+          <img src="/src/assets/focus4u.png"></img>
+          <a href="https://focus-4-you.surge.sh/"></a>
         </SwiperSlide>
       </Swiper>
     </>

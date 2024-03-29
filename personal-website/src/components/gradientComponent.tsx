@@ -23,7 +23,7 @@ const GradientComponent: React.FC<GradientComponentProps> = ({ check }) => {
     return () => {};
   }, [check]);
 
-  return <canvas id="gradient-canvas" data-transition-in />;
+  return <canvas id="gradient-canvas" />;
 };
 
 export default GradientComponent;
