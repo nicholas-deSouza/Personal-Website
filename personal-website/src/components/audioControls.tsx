@@ -10,7 +10,8 @@ export const AudioControls: React.FC<AudioControlsProps> = ({ audioRef, handleAu
       ref={audioRef}
       onPlay={handleAudioPlay}
       controls // Use "controls" attribute to display default audio controls
-      src="/src/assets/Dune_ Part Two Soundtrack _ Kiss the Ring - Hans Zimmer _ WaterTower [ ytmp3x.cc ].mp3"
+      //src="/src/assets/Dune_ Part Two Soundtrack _ Kiss the Ring - Hans Zimmer _ WaterTower [ ytmp3x.cc ].mp3"
+      src="/src/assets/Marvel Animation_'s X-Men _'97 _ Intro _ Disney+ (320kbps).mp3"
     />
   );
 };
