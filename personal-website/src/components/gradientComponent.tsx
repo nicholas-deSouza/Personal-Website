@@ -30,7 +30,8 @@ const GradientComponent: React.FC<GradientComponentProps> = ({ check }) => {
           <path d="M1,0.001 C0.872,0.483,0.344,0.271,0,0.647 V1 H1 V0.001"></path>
         </clipPath>
       </svg>
-      <canvas id="gradient-canvas" />
+      {/* key is used to set animation on re render of gradient */}
+      <canvas key={check!.toString()} id="gradient-canvas" />
     </div>
   );
 };

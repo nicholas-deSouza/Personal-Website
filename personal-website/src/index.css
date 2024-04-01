@@ -21,7 +21,7 @@ body {
 h1 {
   color: #5433ff;
   font-family: Futura;
-  font-size: 4em;
+  font-size: 2em;
   font-style: italic;
   font-weight: 700;
   line-height: normal;
@@ -31,7 +31,7 @@ h1 {
 h2 {
   color: #000;
   font-family: Futura;
-  font-size: 2.5em;
+  font-size: 1.5em;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -59,21 +59,21 @@ a {
   left: 30%;
   transform: translate(-90%, -50%);
   padding: 10px;
-  width: 31em;
+  width: 12em;
 }
 
 .linked-in {
-  width: 6em;
+  width: 2em;
   height: auto;
 }
 
 .github {
-  width: 6em;
+  width: 2em;
   height: auto;
 }
 
 .header {
-  height: 7em;
+  height: 6em;
   width: 100vw;
   background-color: #f8f8f9;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.23);
@@ -89,13 +89,8 @@ a {
   position: absolute;
   bottom: 0;
 
-  /* clip-path: polygon(100% 0%, 100% 50%, 0 100%, 0 50%); */
-
-  /* <svg class="svg">
-  <clipPath id="clip" clipPathUnits="objectBoundingBox"><path d="M0.001,1 C0.525,0.868,0.886,0.279,1,0.001"></path></clipPath>
-</svg> */
-
   clip-path: url(#my-clip-path);
+  animation: gradient-animation 2000ms ease-in forwards;
 }
 
 .audio-visualizer {
@@ -160,4 +155,13 @@ canvas {
 .isLoaded {
   height: 0%;
   width: 0%;
+}
+
+@keyframes gradient-animation {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
