@@ -30,7 +30,7 @@ export const AudioVisualizer = () => {
     }
     const songData = new Uint8Array(140);
     analyzer.current?.getByteFrequencyData(songData);
-    console.log(songData);
+    // console.log(songData);
 
     // default is 4
     const bar_width = 8;
@@ -100,6 +100,12 @@ export const AudioVisualizer = () => {
   //   const maxWidth = window.screen.width;
   //   const maxHeight = window.screen.height;
 
+  const playlist: string[] = [
+    "/src/assets/Dune_ Part Two Soundtrack _ Kiss the Ring - Hans Zimmer _ WaterTower [ ytmp3x.cc ].mp3",
+    "/src/assets/Marvel Animation_'s X-Men _'97 _ Intro _ Disney+ (320kbps).mp3",
+    "/src/assets/P.T. Adamczyk - On the Prowl _ Cyberpunk 2077_ Phantom Liberty (Original Score) (320kbps).mp3",
+  ];
+
   return (
     <div className="audio-visualizer">
       {/* <input type="file" onChange={({ target: { files } }) => files![0] && setFile(files![0])} /> */}
@@ -107,7 +113,7 @@ export const AudioVisualizer = () => {
       {/* )} */}
 
       <canvas ref={canvasRef}></canvas>
-      <AudioControls audioRef={audioRef} handleAudioPlay={handleAudioPlay} />
+      <AudioControls audioRef={audioRef} handleAudioPlay={handleAudioPlay} playlist={playlist} />
     </div>
   );
 };

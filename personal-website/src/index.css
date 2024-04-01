@@ -115,6 +115,14 @@ a {
   padding: 10px;
 }
 
+.audio-controller {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 100px;
+}
+
 canvas {
   border: #000;
   overflow: hidden;
