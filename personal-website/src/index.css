@@ -19,7 +19,6 @@ body {
 }
 
 /* hidden div so that the audio controls can be moved anywhere on the whole screen */
-/* look into making this div's height be right below where the header is */
 .screen {
   position: fixed;
   top: 6em; /* Set top to the height of the header */
@@ -47,6 +46,26 @@ h2 {
   font-weight: 500;
   line-height: normal;
   width: 18em;
+}
+
+.secret-text-div {
+  position: absolute;
+  top: 35%;
+  left: 90%;
+  transform: translate(-90%, -50%);
+  padding: 10px;
+  width: 18em;
+  z-index: 1;
+}
+
+.secret-text {
+  left: 50px;
+  color: #f8f8f9;
+  font-size: 1em;
+}
+
+.secret-text:hover {
+  color: black;
 }
 
 .info-section-h2 {

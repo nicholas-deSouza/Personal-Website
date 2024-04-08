@@ -32,9 +32,12 @@ export const Secret = () => {
       const backgroundColorChange = document.getElementById("root")!;
       backgroundColorChange.style.backgroundColor = "#1E1E1E";
 
-      const backgroundColorChanger = document.getElementById("header")!;
-      backgroundColorChanger.style.backgroundColor = "#1E1E1E";
-      backgroundColorChanger.style.boxShadow = "0 4px 4px rgba(0, 0, 0, 0.5)";
+      const headerColorChanger = document.getElementById("header")!;
+      headerColorChanger.style.backgroundColor = "#1E1E1E";
+      headerColorChanger.style.boxShadow = "0 4px 4px rgba(0, 0, 0, 0.5)";
+
+      const secretTextChange = document.getElementById("secret-text")!;
+      secretTextChange.style.color = "#1E1E1E";
 
       console.log("Konami code activated");
     }
