@@ -57,6 +57,9 @@ export const AudioControls: React.FC<AudioControlsProps> = ({ audioRef, handleAu
   return (
     <div className="audio-controller">
       <div onDragStart={handleDragStart} id="audioControlsID" draggable="true" className="audio-controls">
+        <button className="playPrevBtn" onClick={playPrev}>
+          Play Prev
+        </button>
         <audio
           ref={audioRef}
           onPlay={handleAudioPlay}
@@ -64,8 +67,9 @@ export const AudioControls: React.FC<AudioControlsProps> = ({ audioRef, handleAu
           // instantiates the audio tag with the first song from the playlist array
           src={playlist[0]}
         />
-        <button onClick={playNext}>Play Next</button>
-        <button onClick={playPrev}>Play Prev</button>
+        <button className="playNextBtn" onClick={playNext}>
+          Play Next
+        </button>
       </div>
       <div className="screen" onDragOver={enableDropping} onDrop={handleDrop}></div>
     </div>
