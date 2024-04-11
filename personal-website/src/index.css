@@ -41,7 +41,7 @@ h1 {
 h2 {
   color: #000;
   font-family: Futura;
-  font-size: 0.6em;
+  font-size: 1.7em;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -169,14 +169,13 @@ audio {
   top: -1.7em;
 }
 
-/* the div containing the audio controls */
 .audio-controller {
   position: fixed;
   top: 6em;
   left: 0;
   width: 100%;
   height: calc(100% - 6em); /* Set height to remaining space below the header */
-  background-color: rgba(0, 0, 0, 0); /* Change the background color as needed */
+  background-color: rgba(0, 0, 0, 0);
 }
 
 canvas {
@@ -197,6 +196,17 @@ canvas {
 
 .dialog-close-btn {
   float: right;
+}
+
+.groove-generator-btn,
+.focus4you-btn {
+  background: none;
+  border: none;
+}
+
+dialog {
+  min-height: 64em;
+  min-width: 64em;
 }
 
 @keyframes gradient-animation {
