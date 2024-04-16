@@ -42,8 +42,15 @@ const Header = () => {
         <button id="groove-generator-dialog-btn-id" className="dialog-close-btn">
           Close
         </button>
-        <img src="src/assets/groove-generator.png" alt="image of groove generator website"></img>
-        <h3>A website that allows for Spotify playlist generation with by just giving a phrase!</h3>
+        <div className="img-dialog-div">
+          <img src="src/assets/groove-generator.svg" alt="image of groove generator website"></img>
+          <h3>A website that allows for Spotify playlist generation with by just giving a phrase!</h3>
+        </div>
+        <div className="text-dialog-div">
+          <h3 className="dialog-text">
+            A website that allows for Spotify playlist generation with by just giving a phrase!
+          </h3>
+        </div>
       </dialog>
       {/* </a> */}
 
@@ -59,20 +66,24 @@ const Header = () => {
         <button id="focus4you-dialog-btn-id" className="dialog-close-btn">
           Close
         </button>
-        <img src="src/assets/focus4u.png" alt="image of focus4you website"></img>
-        <h3>
-          A one-stop location on the web focused on improving your productivity by incorporating features such as a
-          pomodoro timer and a heatmap calendar!
-        </h3>
+        <div className="img-dialog-div">
+          <img src="src/assets/focus4u.svg" alt="image of focus4you website"></img>
+        </div>
+        <div className="text-dialog-div">
+          <h3 className="dialog-text">
+            A one-stop location on the web focused on improving your productivity by incorporating features such as a
+            pomodoro timer and a heatmap calendar!
+          </h3>
+        </div>
       </dialog>
 
       {/* </a> */}
 
-      <a href="">
-        <h2 id="contact" className="contact header-elements">
+      {/* <button id="contact" className="contact-btn">
+        <h2 id="contact-id" className="contact header-elements">
           Contact
         </h2>
-      </a>
+      </button> */}
     </div>
   );
 };

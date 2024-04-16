@@ -22,7 +22,20 @@ export const Secret = () => {
         gitHubLogo.style.filter = "invert(1)";
       }
 
-      // dark mode changes for call to action
+      // dark mode changes for modal (dialog)
+      const dialogBackgroundColor = document.querySelectorAll("dialog")!;
+      dialogBackgroundColor.forEach((dialogBackgroundColor) => {
+        dialogBackgroundColor.style.backgroundColor = "#1E1E1E";
+        dialogBackgroundColor.style.borderColor = "#1E1E1E";
+      });
+
+      const h3DialogColor = document.querySelectorAll("h3")!;
+
+      h3DialogColor.forEach((h3DialogColor) => {
+        h3DialogColor.style.color = "white";
+      });
+
+      // dark mode changes for call to action and header
       const h1Color = document.querySelector("h1")!;
       h1Color.style.color = "#E18531";
       const h2Color = document.querySelectorAll("h2")!;
@@ -38,6 +51,7 @@ export const Secret = () => {
 
       const secretTextChange = document.getElementById("secret-text")!;
       secretTextChange.style.color = "#1E1E1E";
+      secretTextChange.style.opacity = "0";
 
       console.log("Konami code activated");
     }
