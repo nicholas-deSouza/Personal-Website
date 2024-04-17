@@ -6,6 +6,11 @@ import GradientComponent from "../gradientComponent";
 export const Secret = () => {
   const konami = useKonamiCode();
   const [check, setCheck] = useState(false);
+  const [positionInPlaylist, setPositionInPlaylist] = useState(0);
+
+  const handlePositionChange = (newPosition: number) => {
+    setPositionInPlaylist(newPosition);
+  };
 
   useEffect(() => {
     if (konami) {
@@ -60,8 +65,10 @@ export const Secret = () => {
 
   return (
     <>
-      <GradientComponent check={check} />
-      {konami && <AudioVisualizer />}
+      <GradientComponent check={check} positionInPlaylist={positionInPlaylist} />
+      {konami && (
+        <AudioVisualizer positionInPlaylist={positionInPlaylist} setPositionInPlaylist={handlePositionChange} />
+      )}
     </>
   );
 };

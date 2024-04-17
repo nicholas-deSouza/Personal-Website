@@ -2,31 +2,72 @@ interface AudioControlsProps {
   audioRef: React.RefObject<HTMLAudioElement>;
   handleAudioPlay: () => void;
   playlist: string[];
+  positionInPlaylist: number;
+  setPositionInPlaylist: (newPosition: number) => void; // Add this line
 }
 
-export const AudioControls: React.FC<AudioControlsProps> = ({ audioRef, handleAudioPlay, playlist }) => {
-  let currentTrackIndex = 0;
-  let prevTrackIndex = -1;
+export const AudioControls: React.FC<AudioControlsProps> = ({
+  audioRef,
+  handleAudioPlay,
+  playlist,
+  positionInPlaylist,
+  setPositionInPlaylist,
+}) => {
+  // let currentTrackIndex = 0;
+  // let prevTrackIndex = -1;
+
+  // const playNext = () => {
+  //   if (currentTrackIndex < playlist.length - 1) {
+  //     currentTrackIndex++;
+  //     // console.log("position after increment", positionInPlaylist);
+  //     // setPositionInPlaylist(positionInPlaylist + 1);
+  //     audioRef.current!.src = playlist[currentTrackIndex];
+  //     audioRef.current!.play();
+  //   }
+
+  //   console.log("current", currentTrackIndex);
+  // };
+
+  // const playPrev = () => {
+  //   if (currentTrackIndex != 0) {
+  //     // makes sure that currentTrackIndex is always 1 ahead
+  //     prevTrackIndex = currentTrackIndex - 1;
+  //     currentTrackIndex = currentTrackIndex - 1;
+  //     // setPositionInPlaylist(positionInPlaylist - 1);
+  //     // console.log("position after decrement", positionInPlaylist);
+  //     audioRef.current!.src = playlist[prevTrackIndex];
+  //     audioRef.current!.play();
+  //   }
+
+  //   console.log("prev", prevTrackIndex);
+  // };
 
   const playNext = () => {
-    if (currentTrackIndex < playlist.length - 1) {
-      currentTrackIndex++;
-      audioRef.current!.src = playlist[currentTrackIndex];
-      audioRef.current!.play();
+    if (positionInPlaylist < playlist.length - 1) {
+      setPositionInPlaylist(positionInPlaylist + 1);
+      if (audioRef.current) {
+        audioRef.current.src = playlist[positionInPlaylist + 1];
+        audioRef.current.play(); // Play the audio
+      }
     }
-    console.log("current", currentTrackIndex);
   };
 
   const playPrev = () => {
-    if (currentTrackIndex != 0) {
-      // makes sure that currenTrackIndex is always 1 ahead
-      prevTrackIndex = currentTrackIndex - 1;
-      currentTrackIndex = currentTrackIndex - 1;
-      audioRef.current!.src = playlist[prevTrackIndex];
-      audioRef.current!.play();
+    if (positionInPlaylist !== 0) {
+      setPositionInPlaylist(positionInPlaylist - 1);
+      if (audioRef.current) {
+        audioRef.current.src = playlist[positionInPlaylist - 1];
+        audioRef.current.play(); // Play the audio
+      }
     }
-    console.log("prev", prevTrackIndex);
   };
+
+  // useEffect(() => {
+  //   // Set the audio source only when positionInPlaylist changes
+  //   if (audioRef.current) {
+  //     audioRef.current.src = playlist[positionInPlaylist];
+  //   }
+  // }, [positionInPlaylist]);
 
   // code for dragging audio controls
   const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
@@ -66,6 +107,7 @@ export const AudioControls: React.FC<AudioControlsProps> = ({ audioRef, handleAu
           controls // Use "controls" attribute to display default audio controls
           // instantiates the audio tag with the first song from the playlist array
           src={playlist[0]}
+          autoPlay={false}
         />
         <button className="playNextBtn" onClick={playNext}>
           Play Next
