@@ -140,7 +140,7 @@ a {
   bottom: 0;
 
   clip-path: url(#my-clip-path);
-  /* animation: gradient-animation 2000ms ease-in forwards; */
+  animation: gradient-animation 2000ms ease-in forwards;
 }
 
 .audio-visualizer {
