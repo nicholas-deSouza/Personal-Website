@@ -55,7 +55,7 @@ export const Secret = () => {
       if (positionInPlaylist === 0) {
         h1Color.style.color = "#E18531";
       } else if (positionInPlaylist === 1) {
-        h1Color.style.color = "#FDE131";
+        h1Color.style.color = "#30E44F";
       } else {
         h1Color.style.color = "#30936D";
       }

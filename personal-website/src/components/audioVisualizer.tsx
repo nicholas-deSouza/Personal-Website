@@ -84,9 +84,9 @@ export const AudioVisualizer: React.FC<AudioVisualizerProps> = ({ positionInPlay
   };
 
   const playlist: string[] = [
-    "/src/assets/Dune_ Part Two Soundtrack _ Kiss the Ring - Hans Zimmer _ WaterTower [ ytmp3x.cc ].mp3",
+    "/src/assets/Kiss the Ring (Dune II) .mp3",
     "/src/assets/The Other Room (Edgerunners).mp3",
-    "/src/assets/ 終末の7秒前 .mp3",
+    "/src/assets/終末の7秒前 .mp3",
   ];
 
   return (

@@ -42,7 +42,7 @@ body {
 h1 {
   color: #5433ff;
   font-family: Futura;
-  font-size: 4em;
+  font-size: 3.5rem;
   font-style: italic;
   font-weight: 700;
   line-height: normal;
@@ -52,7 +52,7 @@ h1 {
 h2 {
   color: #000;
   font-family: Futura;
-  font-size: 2.5em;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -60,7 +60,7 @@ h2 {
 }
 
 .info-section-h2 {
-  font-size: 3em;
+  font-size: 2.5rem;
 }
 
 h3 {
@@ -179,17 +179,21 @@ button:hover {
 .playPrevBtn {
   margin-right: 0.5em;
   position: absolute;
-  left: -12%; /* Align the button to the left edge of its container */
-  top: 70%; /* Align the button vertically in the middle */
+  left: -6%; /* Align the button to the left edge of its container */
+  top: 73%; /* Align the button vertically in the middle */
   transform: translateY(-50%); /* Adjust vertical position to center vertically */
+  background: none;
+  border: none;
 }
 
 .playNextBtn {
   margin-left: 0.5em;
   position: absolute;
-  right: -12%; /* Align the button to the right edge of its container */
-  top: 70%; /* Align the button vertically in the middle */
+  right: -6%; /* Align the button to the right edge of its container */
+  top: 73%; /* Align the button vertically in the middle */
   transform: translateY(-50%); /* Adjust vertical position to center vertically */
+  background: none;
+  border: none;
 }
 
 .audio-controller {
@@ -222,47 +226,10 @@ canvas {
   width: 0%;
 }
 
-.dialog-close-btn {
-  float: right;
-  margin-bottom: 10px;
-}
-
 .groove-generator-btn,
 .focus4you-btn {
   background: none;
   border: none;
-}
-
-.img-dialog-div {
-  width: 100%;
-  height: 75%;
-  overflow: hidden;
-}
-
-.img-dialog-div img {
-  width: 100%;
-  height: auto;
-  display: block;
-  /* opacity: 0.5; */
-}
-
-dialog {
-  height: 60%;
-  width: 50%;
-  background-color: #f8f8f9;
-  border-color: #f8f8f9;
-  border-radius: 1em;
-}
-
-.text-dialog-div {
-  position: absolute;
-  bottom: 0;
-  /* width: 100%; */
-  text-align: center;
-}
-
-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes gradient-animation {
