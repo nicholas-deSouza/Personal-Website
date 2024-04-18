@@ -15,7 +15,7 @@ const MyInfo = () => {
       <a href="https://github.com/nicholas-deSouza">
         <img className="github" id="github-logo" alt="github logo" src="/src/assets/github-logo.png"></img>
       </a>
-      <a>
+      <a href="https://nicholas-desouza.github.io/resume/github-resume.pdf">
         <img className="resume" id="resume-id" alt="resume logo" src="/src/assets/resume.png"></img>
       </a>
       <a href="mailto:nrdesouzag13@gmail.com">
