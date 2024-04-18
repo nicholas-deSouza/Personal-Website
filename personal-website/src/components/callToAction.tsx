@@ -15,7 +15,7 @@ const MyInfo = () => {
       <a>
         <img className="resume" id="resume-id" alt="resume logo" src="/src/assets/resume.png"></img>
       </a>
-      <a>
+      <a href="mailto:nrdesouzag13@gmail.com">
         <img className="contact-me" id="contact-me-id" alt="contact me logo" src="/src/assets/mail.png"></img>
       </a>
     </div>

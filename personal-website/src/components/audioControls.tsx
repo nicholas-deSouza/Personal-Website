@@ -62,6 +62,8 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
     }
   };
 
+  const songNames = ["Kiss the Ring", "The Other Room", "Seven Seconds 'till the End"];
+
   // useEffect(() => {
   //   // Set the audio source only when positionInPlaylist changes
   //   if (audioRef.current) {
@@ -98,6 +100,7 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
   return (
     <div className="audio-controller">
       <div onDragStart={handleDragStart} id="audioControlsID" draggable="true" className="audio-controls">
+        <h3 className="song-names">Now Playing: {songNames[positionInPlaylist]}</h3>
         <button className="playPrevBtn" onClick={playPrev}>
           Play Prev
         </button>

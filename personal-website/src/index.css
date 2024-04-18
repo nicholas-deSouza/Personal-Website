@@ -29,10 +29,20 @@ body {
   width: 100%;
 }
 
+.info-section {
+  position: absolute;
+  top: 38%;
+  left: 25%;
+  transform: translate(-90%, -50%);
+  padding: 10px;
+  width: 23em;
+  z-index: 1;
+}
+
 h1 {
   color: #5433ff;
   font-family: Futura;
-  font-size: 1.5em;
+  font-size: 4em;
   font-style: italic;
   font-weight: 700;
   line-height: normal;
@@ -42,11 +52,15 @@ h1 {
 h2 {
   color: #000;
   font-family: Futura;
-  font-size: 1.2em;
+  font-size: 2.5em;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   width: 18em;
+}
+
+.info-section-h2 {
+  font-size: 3em;
 }
 
 h3 {
@@ -67,15 +81,11 @@ h3 {
 .secret-text {
   left: 50px;
   color: #f8f8f9;
-  font-size: 1em;
+  font-size: 2em;
 }
 
 .secret-text:hover {
   color: black;
-}
-
-.info-section-h2 {
-  font-size: 1.2em;
 }
 
 .header {
@@ -92,33 +102,23 @@ a {
   text-decoration: none;
 }
 
-.info-section {
-  position: absolute;
-  top: 38%;
-  left: 25%;
-  transform: translate(-90%, -50%);
-  padding: 10px;
-  width: 18em;
-  z-index: 1;
-}
-
 .linked-in {
-  width: 4em;
+  width: 5.5em;
   height: auto;
 }
 
 .github {
-  width: 4em;
+  width: 5.5em;
   height: auto;
 }
 
 .resume {
-  width: 4em;
+  width: 5.5em;
   height: auto;
 }
 
 .contact-me {
-  width: 4em;
+  width: 5.5em;
   height: auto;
 }
 
@@ -180,7 +180,7 @@ button:hover {
   margin-right: 0.5em;
   position: absolute;
   left: -12%; /* Align the button to the left edge of its container */
-  top: 50%; /* Align the button vertically in the middle */
+  top: 70%; /* Align the button vertically in the middle */
   transform: translateY(-50%); /* Adjust vertical position to center vertically */
 }
 
@@ -188,7 +188,7 @@ button:hover {
   margin-left: 0.5em;
   position: absolute;
   right: -12%; /* Align the button to the right edge of its container */
-  top: 50%; /* Align the button vertically in the middle */
+  top: 70%; /* Align the button vertically in the middle */
   transform: translateY(-50%); /* Adjust vertical position to center vertically */
 }
 
@@ -199,6 +199,11 @@ button:hover {
   width: 100%;
   height: calc(100% - 6em); /* Set height to remaining space below the header */
   background-color: rgba(0, 0, 0, 0);
+}
+
+.song-names {
+  color: white;
+  padding-bottom: 5px;
 }
 
 canvas {

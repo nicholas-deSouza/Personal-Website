@@ -16,7 +16,6 @@ const GradientComponent: React.FC<GradientComponentProps> = ({ check, positionIn
     // updates gradient colors
     const gradientCanvas = document.getElementById("gradient-canvas")!;
     if (check) {
-      // console.log("asdasda", positionInPlaylist);
       if (positionInPlaylist === 0) {
         gradientCanvas.style.setProperty("--gradient-color-1", "#E18531");
         gradientCanvas.style.setProperty("--gradient-color-2", "#CA7B4A");
@@ -32,7 +31,7 @@ const GradientComponent: React.FC<GradientComponentProps> = ({ check, positionIn
       }
     }
 
-    // renders again whenever check value is changed
+    // renders again whenever values change
     return () => {};
   }, [check, positionInPlaylist]);
 
