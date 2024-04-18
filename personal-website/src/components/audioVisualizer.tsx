@@ -25,6 +25,8 @@ export const AudioVisualizer: React.FC<AudioVisualizerProps> = ({ positionInPlay
     visualizeData();
   };
 
+  console.log("this is the audioVisualizer", positionInPlaylist);
+
   const visualizeData = () => {
     animationController = window.requestAnimationFrame(visualizeData);
     if (audioRef.current?.paused) {
@@ -62,10 +64,19 @@ export const AudioVisualizer: React.FC<AudioVisualizerProps> = ({ positionInPlay
       // creates the linear gradient
       const gradient = ctx.createLinearGradient(0, 0, canvasRef.current!.width, 0);
 
-      gradient.addColorStop(0, "#E8AE52");
-      gradient.addColorStop(0.43, "#CA7B4A");
-      gradient.addColorStop(0.94, "#491f2f");
-      // gradient2.addColorStop(0.8, "#1F5AEC");
+      if (positionInPlaylist === 0) {
+        gradient.addColorStop(0, "#E8AE52");
+        gradient.addColorStop(0.43, "#CA7B4A");
+        gradient.addColorStop(0.94, "#491f2f");
+      } else if (positionInPlaylist === 1) {
+        gradient.addColorStop(0, "#FDE131");
+        gradient.addColorStop(0.43, "#30E44F");
+        gradient.addColorStop(0.94, "#002A04");
+      } else {
+        gradient.addColorStop(0, "#30936D");
+        gradient.addColorStop(0.43, "#72BE9B");
+        gradient.addColorStop(0.94, "#257490");
+      }
 
       ctx.fillStyle = gradient;
       ctx.fillRect(start, 0, bar_width, songData[i]);
@@ -74,8 +85,8 @@ export const AudioVisualizer: React.FC<AudioVisualizerProps> = ({ positionInPlay
 
   const playlist: string[] = [
     "/src/assets/Dune_ Part Two Soundtrack _ Kiss the Ring - Hans Zimmer _ WaterTower [ ytmp3x.cc ].mp3",
-    "/src/assets/Marvel Animation_'s X-Men _'97 _ Intro _ Disney+ (320kbps).mp3",
-    "/src/assets/P.T. Adamczyk - On the Prowl _ Cyberpunk 2077_ Phantom Liberty (Original Score) (320kbps).mp3",
+    "/src/assets/The Other Room (Edgerunners).mp3",
+    "/src/assets/ 終末の7秒前 .mp3",
   ];
 
   return (

@@ -27,6 +27,16 @@ export const Secret = () => {
         gitHubLogo.style.filter = "invert(1)";
       }
 
+      const resumeLogo = document.getElementById("resume-id");
+      if (resumeLogo) {
+        resumeLogo.style.filter = "invert(1)";
+      }
+
+      const mailLogo = document.getElementById("contact-me-id");
+      if (mailLogo) {
+        mailLogo.style.filter = "invert(1)";
+      }
+
       // dark mode changes for modal (dialog)
       const dialogBackgroundColor = document.querySelectorAll("dialog")!;
       dialogBackgroundColor.forEach((dialogBackgroundColor) => {
@@ -42,7 +52,14 @@ export const Secret = () => {
 
       // dark mode changes for call to action and header
       const h1Color = document.querySelector("h1")!;
-      h1Color.style.color = "#E18531";
+      if (positionInPlaylist === 0) {
+        h1Color.style.color = "#E18531";
+      } else if (positionInPlaylist === 1) {
+        h1Color.style.color = "#FDE131";
+      } else {
+        h1Color.style.color = "#30936D";
+      }
+
       const h2Color = document.querySelectorAll("h2")!;
       h2Color.forEach((h2Color) => {
         h2Color.style.color = "white";
@@ -61,7 +78,7 @@ export const Secret = () => {
       console.log("Konami code activated");
     }
     // only renders when konami value is changed
-  }, [konami]);
+  }, [konami, positionInPlaylist]);
 
   return (
     <>

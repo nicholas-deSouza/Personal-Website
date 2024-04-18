@@ -18,16 +18,17 @@ const GradientComponent: React.FC<GradientComponentProps> = ({ check, positionIn
     if (check) {
       // console.log("asdasda", positionInPlaylist);
       if (positionInPlaylist === 0) {
-        // gradientCanvas.style.setProperty("--gradient-color-1", "#E18531");
-        // gradientCanvas.style.setProperty("--gradient-color-2", "#CA7B4A");
-        // gradientCanvas.style.setProperty("--gradient-color-3", "#491f2f");
-        gradientCanvas.style.setProperty("--gradient-color-1", "#30E44F");
-        gradientCanvas.style.setProperty("--gradient-color-2", "#002A04");
-        gradientCanvas.style.setProperty("--gradient-color-3", "#FDE131");
-      } else {
         gradientCanvas.style.setProperty("--gradient-color-1", "#E18531");
         gradientCanvas.style.setProperty("--gradient-color-2", "#CA7B4A");
         gradientCanvas.style.setProperty("--gradient-color-3", "#491f2f");
+      } else if (positionInPlaylist === 1) {
+        gradientCanvas.style.setProperty("--gradient-color-1", "#FDE131");
+        gradientCanvas.style.setProperty("--gradient-color-2", "#30E44F");
+        gradientCanvas.style.setProperty("--gradient-color-3", "#002A04");
+      } else {
+        gradientCanvas.style.setProperty("--gradient-color-1", "#30936D");
+        gradientCanvas.style.setProperty("--gradient-color-2", "#72BE9B");
+        gradientCanvas.style.setProperty("--gradient-color-3", "#257490");
       }
     }
 
