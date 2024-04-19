@@ -102,7 +102,7 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
       <div onDragStart={handleDragStart} id="audioControlsID" draggable="true" className="audio-controls">
         <h3 className="song-names">Now Playing: {songNames[positionInPlaylist]}</h3>
         <button className="playPrevBtn" onClick={playPrev}>
-          <img src="/src/assets/Play Prev.png"></img>
+          <img src="/Play Prev.png"></img>
         </button>
         <audio
           ref={audioRef}
@@ -113,7 +113,7 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
           autoPlay={false}
         />
         <button className="playNextBtn" onClick={playNext}>
-          <img src="/src/assets/Play Next.png"></img>
+          <img src="/Play Next.png"></img>
         </button>
       </div>
       <div className="screen" onDragOver={enableDropping} onDrop={handleDrop}></div>

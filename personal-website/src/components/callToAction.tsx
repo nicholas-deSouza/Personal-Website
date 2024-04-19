@@ -10,16 +10,16 @@ const MyInfo = () => {
         Welcome to my small slice of the internet and don't forget to check out my projects in the header! 👋🏼
       </h2>
       <a href="https://www.linkedin.com/in/nicholas-de-souza/">
-        <img className="linked-in" id="linked-in" alt="linkedin logo" src="/src/assets/linked-in-logo.png"></img>
+        <img className="linked-in" id="linked-in" alt="linkedin logo" src="/linked-in-logo.png"></img>
       </a>
       <a href="https://github.com/nicholas-deSouza">
-        <img className="github" id="github-logo" alt="github logo" src="/src/assets/github-logo.png"></img>
+        <img className="github" id="github-logo" alt="github logo" src="/github-logo.png"></img>
       </a>
       <a href="https://nicholas-desouza.github.io/resume/github-resume.pdf">
-        <img className="resume" id="resume-id" alt="resume logo" src="/src/assets/resume.png"></img>
+        <img className="resume" id="resume-id" alt="resume logo" src="/resume.png"></img>
       </a>
       <a href="mailto:nrdesouzag13@gmail.com">
-        <img className="contact-me" id="contact-me-id" alt="contact me logo" src="/src/assets/mail.png"></img>
+        <img className="contact-me" id="contact-me-id" alt="contact me logo" src="/mail.png"></img>
       </a>
     </div>
   );
