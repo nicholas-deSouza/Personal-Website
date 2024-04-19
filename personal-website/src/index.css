@@ -32,7 +32,7 @@ body {
 .info-section {
   position: absolute;
   top: 38%;
-  left: 25%;
+  left: 42%;
   transform: translate(-90%, -50%);
   padding: 10px;
   width: 23em;
@@ -42,7 +42,7 @@ body {
 h1 {
   color: #5433ff;
   font-family: Futura;
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-style: italic;
   font-weight: 700;
   line-height: normal;
@@ -52,7 +52,7 @@ h1 {
 h2 {
   color: #000;
   font-family: Futura;
-  font-size: 2rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -60,7 +60,7 @@ h2 {
 }
 
 .info-section-h2 {
-  font-size: 2.5rem;
+  font-size: 1.3rem;
 }
 
 h3 {
@@ -81,7 +81,7 @@ h3 {
 .secret-text {
   left: 50px;
   color: #f8f8f9;
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .secret-text:hover {
@@ -103,22 +103,22 @@ a {
 }
 
 .linked-in {
-  width: 5.5em;
+  width: 2.6em;
   height: auto;
 }
 
 .github {
-  width: 5.5em;
+  width: 2.6em;
   height: auto;
 }
 
 .resume {
-  width: 5.5em;
+  width: 2.6em;
   height: auto;
 }
 
 .contact-me {
-  width: 5.5em;
+  width: 2.6em;
   height: auto;
 }
 
@@ -168,7 +168,7 @@ a {
 
 /* height doesn't actually change the height of the audio tag */
 audio {
-  width: 34em;
+  width: 22em;
   cursor: pointer;
 }
 
@@ -230,6 +230,7 @@ canvas {
 .focus4you-btn {
   background: none;
   border: none;
+  text-align: center;
 }
 
 @keyframes gradient-animation {
