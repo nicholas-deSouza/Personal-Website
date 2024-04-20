@@ -83,7 +83,7 @@ export const AudioVisualizer: React.FC<AudioVisualizerProps> = ({ positionInPlay
     }
   };
 
-  const playlist: string[] = ["/Kiss the Ring (Dune II) .mp3", "/The Other Room (Edgerunners).mp3", "/終末の7秒前.mp3"];
+  const playlist: string[] = ["/Kiss the Ring (Dune II) .mp3", "/The Other Room (Edgerunners).mp3", "/seven.mp3"];
 
   return (
     <div className="audio-visualizer">
