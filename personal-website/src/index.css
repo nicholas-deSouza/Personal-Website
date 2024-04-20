@@ -32,7 +32,7 @@ body {
 .info-section {
   position: absolute;
   top: 45%;
-  left: 42%;
+  left: 40%;
   transform: translate(-90%, -50%);
   padding: 10px;
   width: 23em;
@@ -91,6 +91,7 @@ h3 {
 .header {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 /* .header-elements {
@@ -147,7 +148,7 @@ a {
   display: flex;
   flex-direction: column;
   border: #000;
-  height: 80vh;
+  height: 50vh;
   width: 100vw;
   overflow: hidden;
 }
