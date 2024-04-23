@@ -74,8 +74,6 @@ export const Secret = () => {
       const secretTextChange = document.getElementById("secret-text")!;
       secretTextChange.style.color = "#1E1E1E";
       secretTextChange.style.opacity = "0";
-
-      console.log("Konami code activated");
     }
     // only renders when konami value is changed
   }, [konami, positionInPlaylist]);

@@ -34,7 +34,6 @@ export const AudioVisualizer: React.FC<AudioVisualizerProps> = ({ positionInPlay
     }
     const songData = new Uint8Array(140);
     analyzer.current?.getByteFrequencyData(songData);
-    // console.log(songData);
 
     // default is 4
     const bar_width = 8;
@@ -42,12 +41,6 @@ export const AudioVisualizer: React.FC<AudioVisualizerProps> = ({ positionInPlay
     const ctx = canvasRef.current!.getContext("2d")!;
     canvasRef.current!.width = window.innerWidth;
     canvasRef.current!.height = window.innerHeight;
-
-    // const observer = new ResizeObserver((entries) => {
-    //     canvasRef.current!.width = canvasRef.current!.clientWidth;
-    //     canvasRef.current!.height = canvasRef.current!.clientHeight;
-    //   });
-    //   observer.observe(canvasRef)
 
     // start of canvas building
     ctx.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);

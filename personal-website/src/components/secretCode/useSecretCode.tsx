@@ -14,7 +14,7 @@ export const useSecretCode = (secretCode: Array<string>) => {
       return;
     }
 
-    console.log(`key = ${key}`);
+    // console.log(`key = ${key}`);
 
     // reset if invalid key
     if (key !== secretCode[count]) {

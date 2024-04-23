@@ -13,35 +13,6 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
   positionInPlaylist,
   setPositionInPlaylist,
 }) => {
-  // let currentTrackIndex = 0;
-  // let prevTrackIndex = -1;
-
-  // const playNext = () => {
-  //   if (currentTrackIndex < playlist.length - 1) {
-  //     currentTrackIndex++;
-  //     // console.log("position after increment", positionInPlaylist);
-  //     // setPositionInPlaylist(positionInPlaylist + 1);
-  //     audioRef.current!.src = playlist[currentTrackIndex];
-  //     audioRef.current!.play();
-  //   }
-
-  //   console.log("current", currentTrackIndex);
-  // };
-
-  // const playPrev = () => {
-  //   if (currentTrackIndex != 0) {
-  //     // makes sure that currentTrackIndex is always 1 ahead
-  //     prevTrackIndex = currentTrackIndex - 1;
-  //     currentTrackIndex = currentTrackIndex - 1;
-  //     // setPositionInPlaylist(positionInPlaylist - 1);
-  //     // console.log("position after decrement", positionInPlaylist);
-  //     audioRef.current!.src = playlist[prevTrackIndex];
-  //     audioRef.current!.play();
-  //   }
-
-  //   console.log("prev", prevTrackIndex);
-  // };
-
   const playNext = () => {
     if (positionInPlaylist < playlist.length - 1) {
       setPositionInPlaylist(positionInPlaylist + 1);
@@ -63,13 +34,6 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
   };
 
   const songNames = ["Kiss the Ring", "The Other Room", "Seven Seconds 'till the End"];
-
-  // useEffect(() => {
-  //   // Set the audio source only when positionInPlaylist changes
-  //   if (audioRef.current) {
-  //     audioRef.current.src = playlist[positionInPlaylist];
-  //   }
-  // }, [positionInPlaylist]);
 
   // code for dragging audio controls
   const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
