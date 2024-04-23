@@ -130,12 +130,9 @@ a {
 #gradient-canvas {
   width: 100%;
   height: 60vh;
-  /* --gradient-color-1: #1cc6ff;
+  --gradient-color-1: #1cc6ff;
   --gradient-color-2: #43ffd2;
-  --gradient-color-3: #5433ff; */
-  --gradient-color-1: black;
-  --gradient-color-2: red;
-  --gradient-color-3: blue;
+  --gradient-color-3: #5433ff;
 
   position: absolute;
   bottom: 0;
