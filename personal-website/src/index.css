@@ -232,8 +232,12 @@ canvas {
   text-align: center;
 }
 
-.hamburger {
-  display: none;
+.header-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
 }
 
 @keyframes gradient-animation {
@@ -247,13 +251,27 @@ canvas {
 
 /* Media Query for mobile */
 @media only screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
   .header {
     width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+
+  .header-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap to next line */
+  }
+
+  .header-list h2 {
+    margin-left: 25px;
+    width: 9em;
+  }
+
+  .header-item {
+    flex: 1 0 45%; /* Two items per row */
+    max-width: 45%; /* Maximum width of each item */
+    text-align: center; /* Center align text */
   }
 
   .groove-generator-btn,
