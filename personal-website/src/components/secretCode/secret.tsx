@@ -60,6 +60,11 @@ export const Secret = () => {
         h1Color.style.color = "#30936D";
       }
 
+      const aTagColor = document.querySelectorAll("a")!;
+      aTagColor.forEach((aTagColor) => {
+        aTagColor.style.color = "white";
+      });
+
       const h2Color = document.querySelectorAll("h2")!;
       h2Color.forEach((h2Color) => {
         h2Color.style.color = "white";
