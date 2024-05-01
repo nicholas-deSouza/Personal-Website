@@ -33,7 +33,7 @@ body {
 
 .info-section {
   position: absolute;
-  top: 52%;
+  top: 48%;
   left: 40%;
   transform: translate(-90%, -50%);
   padding: 10px;
@@ -140,10 +140,10 @@ a {
 
 .audio-visualizer {
   position: fixed;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   border: #000;
-  height: 30%;
+  height: 50%;
   width: 100vw;
   overflow: hidden;
   z-index: 400;
@@ -312,7 +312,7 @@ canvas {
   .canvas-wrapper {
     width: 100%;
 
-    height: calc(100vh - 6em); /* Adjust as needed */
+    height: calc(100vh -6em); /* Adjust as needed */
     clip-path: url(#my-clip-path-mobile);
     overflow: hidden;
     bottom: 0;
