@@ -43,7 +43,7 @@ body {
 
 h1 {
   color: #5433ff;
-  font-family: Futura;
+  font-family: "Futura";
   font-size: 1.8rem;
   font-style: italic;
   font-weight: 700;
@@ -359,13 +359,14 @@ canvas {
 
   h1 {
     font-size: 1.2em;
+    font-style: normal;
   }
 
   .github,
   .linked-in,
   .contact-me,
   .resume {
-    width: 2em;
+    width: 2.55em;
   }
 }
 
