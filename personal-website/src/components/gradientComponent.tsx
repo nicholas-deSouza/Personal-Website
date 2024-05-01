@@ -46,6 +46,9 @@ const GradientComponent: React.FC<GradientComponentProps> = ({ check, positionIn
           <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
             <path d="M1,0.25 C0.999,0.23,0.3,0.9,0,0.747 V1 H1 V0.001" />
           </clipPath>
+          <clipPath id="my-clip-path-mobile" clipPathUnits="objectBoundingBox">
+            <path d="M1,0.25 C0.999,0.23,0.4,0.9,0,0.6 V1 H1 V0.001" />
+          </clipPath>
         </defs>
       </svg>
     </div>
