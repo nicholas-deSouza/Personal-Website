@@ -85,10 +85,10 @@ export const Secret = () => {
 
   return (
     <>
-      <GradientComponent check={check} positionInPlaylist={positionInPlaylist} />
       {konami && (
         <AudioVisualizer positionInPlaylist={positionInPlaylist} setPositionInPlaylist={handlePositionChange} />
       )}
+      <GradientComponent check={check} positionInPlaylist={positionInPlaylist} />
     </>
   );
 };

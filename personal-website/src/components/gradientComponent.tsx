@@ -1,3 +1,4 @@
+// import { url } from "inspector";
 import { useEffect } from "react";
 import { Gradient } from "whatamesh";
 
@@ -36,14 +37,17 @@ const GradientComponent: React.FC<GradientComponentProps> = ({ check, positionIn
   }, [check, positionInPlaylist]);
 
   return (
-    <div>
-      <svg className="svg">
-        <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
-          <path d="M1,0.001 C0.872,0.483,0.344,0.271,0,0.647 V1 H1 V0.001"></path>
-        </clipPath>
-      </svg>
+    <div className="canvas-wrapper">
       {/* key is used to set animation on re render of gradient */}
       <canvas key={check!.toString()} id="gradient-canvas" />
+
+      <svg className="svg">
+        <defs>
+          <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+            <path d="M1,0.25 C0.999,0.23,0.3,0.9,0,0.747 V1 H1 V0.001" />
+          </clipPath>
+        </defs>
+      </svg>
     </div>
   );
 };
