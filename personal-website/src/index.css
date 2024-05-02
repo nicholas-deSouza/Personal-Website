@@ -16,6 +16,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 /* hidden div so that the audio controls can be moved anywhere on the whole screen */
@@ -312,7 +313,7 @@ canvas {
   .canvas-wrapper {
     width: 100%;
 
-    height: calc(100vh -6em); /* Adjust as needed */
+    height: calc(100vh -6em);
     clip-path: url(#my-clip-path-mobile);
     overflow: hidden;
     bottom: 0;
